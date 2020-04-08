@@ -33,7 +33,7 @@ switch( $action )
 function createEntity( string $brand, string $price, int $count )
 {
     file_put_contents( "cars.txt", "brand=$brand,price=$price,count=$count;", FILE_APPEND );
-    echo getTable();
+    header ( "Location: /" );
 }
 
 //function deleteAll()
